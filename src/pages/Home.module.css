@@ -1,0 +1,105 @@
+
+/* Home.module.css */
+
+/* Hero Section */
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .logoImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .headingLogo {
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .links {
+    margin-top: 30px;
+  }
+  
+  .links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .links a:hover {
+    color: #f5a623;
+  }
+  
+  .slogan {
+    margin-top: 60px;
+  }
+  
+  .slogan h2 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  .slogan h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  /* Facilities Section */
+  .facilitiesContainer {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+  }
+  
+  .facility {
+    margin-bottom: 50px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .facility h1 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  .facilityDescription {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .imageContainer img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .facility h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  /* Add more styles as needed for additional sections or content */
+  
