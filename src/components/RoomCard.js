@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { FaHeart, FaStar } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import styles from './RoomCard.module.css';
 
-const RoomCard = ({ room, image, onAddToFavorites, onBookRoom, favorites }) => {
-  console.log('Room Card Data:', room); 
+const RoomCard = ({ room, onAddToFavorites, onBookRoom, favorites }) => {
+  const history = useHistory();
+
   const handleAddToFavorites = () => {
     onAddToFavorites(room.id);
   };
@@ -26,7 +27,7 @@ const RoomCard = ({ room, image, onAddToFavorites, onBookRoom, favorites }) => {
       <div className={styles.likeIcon} onClick={handleAddToFavorites}>
         <FaHeart />
       </div>
-      <img src={image} alt={room.name} className={styles.picture} />
+      <img src={room.image} alt={room.name} className={styles.picture} />
       <div className={styles.info}>
         <h2 className={styles.name}>{room.name}</h2>
         <p className={styles.features}>{room.features}</p>

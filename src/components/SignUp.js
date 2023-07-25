@@ -3,23 +3,14 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../config/firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
 
 function SignUp() {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const passwordRequirements = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-  // The regular expression above enforces the following requirements for the password:
-  // - At least 8 characters long
-  // - Contains at least one lowercase letter
-  // - Contains at least one uppercase letter
-  // - Contains at least one digit
-  // - Contains at least one special character (@, $, !, %, *, ?, &)
 
-  const goToLogin = () => {
+  const goToLoginForm = () => {
     history.push('/LoginForm');
   };
 
@@ -34,44 +25,17 @@ function SignUp() {
       return false;
     }
 
-    // Implement password strength validation here if desired
-    // e.g., check if the password meets the required criteria
-    if (!passwordRequirements.test(password)) {
-        alert(
-          'Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, one digit, and one special character.'
-        );
-        return false;
-      }
-  
-
     return true;
-  };
-  const handleLogin = () => {
-    if (validateInput()) {
-      signInWithEmailAndPassword(auth, email, password)
-        .then(() => {
-          alert('Login Success');
-          history.push('/');
-        })
-        .catch((error) => {
-          console.error(error);
-          alert('Login failed. Please try again.');
-        });
-    }
   };
 
   const handleSignUp = () => {
     if (validateInput()) {
-      setIsLoading(true);
-
       createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
-          setIsLoading(false);
           alert('Registration successful!');
-          history.push('/Login');
+          history.push('/LoginForm');
         })
         .catch((error) => {
-          setIsLoading(false);
           console.log(error);
           alert('An error occurred. Please try again.');
         });
@@ -109,10 +73,8 @@ function SignUp() {
         />
       </div>
       <div>
-        <button onClick={handleSignUp} disabled={isLoading}>
-          {isLoading ? 'Signing Up...' : 'Sign Up'}
-        </button>
-        <button onClick={goToLogin}>Already have an account? Log In</button>
+        <button onClick={handleSignUp}>Sign Up</button>
+        <button onClick={goToLoginForm}>Already have an account? Log In</button>
       </div>
     </div>
   );

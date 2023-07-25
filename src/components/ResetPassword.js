@@ -2,8 +2,8 @@
 import { sendPasswordResetEmail } from "firebase/auth";
 import { useState } from "react";
 import React from "react";
-import { auth } from "../config/firebase"; // import auth from your Firebase configuration file
-import styles from "./ResetPassword.module.css";
+import { auth,db } from "../config/firebase"; // import auth from your Firebase configuration file
+import styles from "./ResetPassword.module..css";
 
 function ResetPassword() {
   const resetPassword = () => {
