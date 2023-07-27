@@ -1,15 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import styles from './Rooms.module.css';
-import { auth, db } from '../firebase/config';
+import { Link } from 'react-router-dom';
 import { collection, getDocs } from 'firebase/firestore';
-import RoomCard from '../components/RoomCard';
+import { db } from '../firebase/config';
+
+import styles from './Rooms.module.css';
 
 const Rooms = () => {
   const [favorites, setFavorites] = useState([]);
   const [rooms, setRooms] = useState([]);
-  const history = useHistory();
 
   useEffect(() => {
     const fetchRooms = async () => {
@@ -20,6 +19,7 @@ const Rooms = () => {
           id: doc.id,
           ...doc.data(),
         }));
+        console.log('roomData:', roomData);
         setRooms(roomData);
       } catch (error) {
         console.error('Error fetching rooms:', error);
@@ -29,18 +29,10 @@ const Rooms = () => {
     fetchRooms();
   }, []);
 
+  console.log('rooms:', rooms);
+
   const handleAddToFavorites = (roomId) => {
     setFavorites((prevFavorites) => [...prevFavorites, roomId]);
-  };
-
-  const handleBookRoom = (roomId) => {
-    const selectedRoom = rooms.find((room) => room.id === roomId);
-    if (selectedRoom) {
-      history.push({
-        pathname: `/reservation/${roomId}`,
-        state: { room: selectedRoom },
-      });
-    }
   };
 
   return (
@@ -48,13 +40,32 @@ const Rooms = () => {
       <h2 className={styles.title}>Rooms</h2>
       <div className={styles.roomList}>
         {rooms.map((room) => (
-          <RoomCard
-            key={room.id}
-            room={room}
-            onAddToFavorites={() => handleAddToFavorites(room.id)}
-            onBookRoom={() => handleBookRoom(room.id)}
-            favorites={favorites}
-          />
+          <div key={room.id} className={styles.roomCard}>
+            {/* Change the link path to RoomDetails */}
+            <Link to={`/Rooms/${room.id}`} style={{ textDecoration: 'none' }}>
+              <img src={room.image} alt={room.name} className={styles.picture} />
+              <div className={styles.info}>
+                <h2 className={styles.name}>{room.name}</h2>
+                <p className={styles.features}>{room.features}</p>
+                <div className={styles.rating}>
+                  <span className={styles.starRating}>
+                    {Array.from({ length: room.rating }).map((_, index) => (
+                      <span key={index}>&#9733;</span>
+                    ))}
+                  </span>
+                  <span className={styles.ratingText}>{room.rating} Star Ratings</span>
+                </div>
+                <div className={styles.price}>${room.price} per night</div>
+              </div>
+            </Link>
+            <div className={styles.likeIcon}>
+              <button onClick={() => handleAddToFavorites(room.id)}>
+                <span role="img" aria-label="Favorite">
+                  &#10084;&#65039;
+                </span>
+              </button>
+            </div>
+          </div>
         ))}
       </div>
       <div>
@@ -62,7 +73,7 @@ const Rooms = () => {
         <ul className={styles.favorites}>
           {favorites.map((roomId) => (
             <li key={roomId}>
-              <Link to={`/reservation/${roomId}`}>{`Room ${roomId}`}</Link>
+              <Link to={`/Rooms/${roomId}`}>{`Room ${roomId}`}</Link>
             </li>
           ))}
         </ul>

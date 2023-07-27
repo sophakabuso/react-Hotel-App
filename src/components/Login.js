@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../config/firebase';
+import { auth } from '../firebase/config';
 import styles from './Login.module.css'; // Import the CSS module
 
 function Login() {

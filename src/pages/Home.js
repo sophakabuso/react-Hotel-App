@@ -1,5 +1,6 @@
 import React from 'react';
 import Facilities from '../components/Facilities';
+import Login from '../components/Login'
 import styles from './Home.module.css';
 import backgroundImage from '../assets/images/backgroundImage.jpg';
 import logoImage from '../assets/images/logoImage.jpg';
@@ -15,7 +16,7 @@ const Home = () => {
           <h1 className={styles.headingLogo}>BMBhotels</h1>
         </div>
         <nav className={styles.links}>
-          <Link to="/LoginForm">Members</Link>
+          <Link to="/Login">Members</Link>
           <Link to="/facilities">Facilities</Link>
           <Link to="/rooms">Rooms</Link>
         </nav>
@@ -28,9 +29,9 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Facilities Section */}
+      
       <Facilities />
-
+      <Login/>
       {/* You can add more sections or content here */}
     </div>
   );

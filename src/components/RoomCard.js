@@ -1,17 +1,14 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
 import { FaHeart, FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 import styles from './RoomCard.module.css';
 
-const RoomCard = ({ room, onAddToFavorites, onBookRoom, favorites }) => {
-  const history = useHistory();
+const RoomCard = ({ room, onAddToFavorites, favorites }) => {
+  const isFavorite = favorites.includes(room.id);
 
   const handleAddToFavorites = () => {
     onAddToFavorites(room.id);
-  };
-
-  const handleBookRoom = () => {
-    onBookRoom(room.id);
   };
 
   const renderStarRating = (rating) => {
@@ -25,7 +22,7 @@ const RoomCard = ({ room, onAddToFavorites, onBookRoom, favorites }) => {
   return (
     <div className={styles.container}>
       <div className={styles.likeIcon} onClick={handleAddToFavorites}>
-        <FaHeart />
+        <FaHeart color={isFavorite ? 'red' : 'black'} />
       </div>
       <img src={room.image} alt={room.name} className={styles.picture} />
       <div className={styles.info}>
@@ -36,7 +33,9 @@ const RoomCard = ({ room, onAddToFavorites, onBookRoom, favorites }) => {
           <span className={styles.ratingText}>{room.rating} Star Ratings</span>
         </div>
         <div className={styles.price}>${room.price} per night</div>
-        <button onClick={handleBookRoom}>Book</button>
+        <Link to={`/Reservation/${room.id}`} className={styles.reserveBtn}>
+          Reserve Now
+        </Link>
       </div>
     </div>
   );

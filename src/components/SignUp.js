@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../config/firebase';
+import { auth,db} from '../firebase/config';
 
 function SignUp() {
   const history = useHistory();
