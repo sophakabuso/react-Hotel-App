@@ -10,8 +10,8 @@ function SignUp() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const goToLoginForm = () => {
-    history.push('/LoginForm');
+  const goToLogin = () => {
+    history.push('/Login');
   };
 
   const validateInput = () => {
@@ -33,7 +33,7 @@ function SignUp() {
       createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
           alert('Registration successful!');
-          history.push('/LoginForm');
+          history.push('/');
         })
         .catch((error) => {
           console.log(error);
@@ -74,7 +74,7 @@ function SignUp() {
       </div>
       <div>
         <button onClick={handleSignUp}>Sign Up</button>
-        <button onClick={goToLoginForm}>Already have an account? Log In</button>
+        <button onClick={goToLogin}>Already have an account? Log In</button>
       </div>
     </div>
   );

@@ -40,10 +40,10 @@ function App() {
           <Route path="/Login" component={Login} />
           <Route path="/SignUp" component={SignUp} />
           <Route path="/ResetPassword" component={ResetPassword} />
-          <Route path="/SuccessReserv" component={SuccessReserv} />
-          <Route path="/PageDontExist" component={PageDontExist} />
-          {/* Add the Reservation route */}
           <Route path="/Reservation/:id" component={Reservation} />
+          <Route path="/SuccessReserv" component={SuccessReserv} />
+          
+          <Route path="/PageDontExist" component={PageDontExist} />
         </Switch>
       </div>
     </Router>

@@ -38,6 +38,11 @@ function Reservation() {
   const handleReservation = async () => {
     try {
       const user = auth.currentUser;
+      if(!user){
+        //User not logged in, redirect to Login page.
+        alert('You Must SignUp First')
+        history.push('/Login')
+      }
       const reservation = {
         room: room.id,
         fullName,
