@@ -5,7 +5,7 @@
     align-items: center;
     padding: 20px;
     flex-direction: column;
-    background-color: rgb(246, 251, 250);
+    background-color: rgb(225, 204, 227);
   
   }
   
@@ -15,44 +15,59 @@
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: rgb(246, 251, 250);
+    box-shadow: 0 2px 4px rgb(210, 1, 233) ;
+    background-color: rgb(21, 23, 22);
+  
+  }
+  .logoPlcHolder a{
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgb(210, 1, 233) ;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #1a1a1a;
+    color:rgb(251, 215, 7) ;
+    border-radius: 50px;
+    display: inline;
+    
+  }  
+  .logoPlcHolder a:hover{
+    color: #a00ecd;
   
   }
   
   .facility h1 {
     font-size: 40px;
     margin-bottom: 20px;
-    color: #5c066b;
+    color:rgb(251, 215, 7) ;
   }
   
   .facility h2 {
   
     font-size:3vh;
-    color: #5c066b;
+   color:rgb(251, 215, 7) ;
     background-color: rgba(0, 0, 0, 0.6); 
     width: 30vh;
     height: 5vh;
-    bottom :16%;
+    bottom :8%;
     left: 40%;
     z-index: 1;
-    position:sticky;
+    position:relative;
+
     border-radius: 4px;
   
     
   }
   .facilityDescription{
-    color: #5c066b;
+    color:rgb(251, 215, 7) ;
     font-size:4vh;
   }
   
   .imageContainer {
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    overflow-x: scroll;
+    scroll-behavior:initial;
     scroll-snap-type: x mandatory;
     margin-top: auto;
-   
     width: 100%;
     height:500px; /* Adjust the desired height */
   }
@@ -64,6 +79,8 @@
   .imageContainer::-webkit-scrollbar-thumb {
     background-color: rgba(230, 33, 33, 0.3);
     border-radius: 4px;
+    background-color: transparent;
+  
   }
   
   .imageContainer img {
@@ -74,9 +91,22 @@
     scroll-snap-align: start;
     object-fit: cover;
     border-radius: 8px;
+    
   }
   
-  .imageContainer::-webkit-scrollbar-track {
-    background-color: transparent;
+  
+   
+  .links a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #1a1a1a;
+    color:rgb(251, 215, 7) ;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgb(210, 1, 233) ;
+  }
+  .links a:hover {
+    color: #a00ecd;
   }
   

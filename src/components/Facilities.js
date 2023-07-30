@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import styles from './Facilities.module.css';
 import gympic from '../assets/images/gympic.jpeg';
 import gympic2 from '../assets/images/gympic2.jpeg';
@@ -22,10 +24,21 @@ import laundrypic3 from '../assets/images/laundrypic3.jpeg';
 function Facilities() {
   return (
     <div className={styles.facilitiesContainer}>
+       <div className={styles.logoPlcHolder} >
+            <Link to="/Login"> HOTELS</Link>
+
+          </div>
+      <div>
+        <nav className={styles.links}>
+          <Link to="/Login">Members</Link>
+          <Link to="/rooms">Rooms</Link>
+          <Link to ="/">Home</Link>
+        </nav>
+      </div>
       <div className={styles.facility}>
         <h1>FACILITIES</h1>
         <p className={styles.facilityDescription}>
-        Experience world-class amenities and exceptional services in our luxurious hotel. Enjoy state-of-the-art facilities including a fully equipped gym, relaxing spa, refreshing swimming pool, exquisite restaurant, and efficient laundry service. Indulge in a truly remarkable stay with us.
+          Experience world-class amenities and exceptional services in our luxurious hotel. Enjoy state-of-the-art facilities including a fully equipped gym, relaxing spa, refreshing swimming pool, exquisite restaurant, and efficient laundry service. Indulge in a truly remarkable stay with us.
         </p>
       </div>
       <div className={styles.facility}>
@@ -33,11 +46,11 @@ function Facilities() {
           <img src={gympic} alt="Gym" />
           <img src={gympic2} alt="Gym" />
           <img src={gympic3} alt="Gym" />
-          
+
         </div>
-        
+
         <h2>THE GYM</h2>
-    
+
       </div>
       <div className={styles.facility}>
         <div className={styles.imageContainer}>

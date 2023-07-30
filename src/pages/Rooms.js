@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase/config';
+import RoomCard from '../components/RoomCard'; // Import the RoomCard component
 
 import styles from './Rooms.module.css';
 
 const Rooms = () => {
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState([]); // Define favorites state
   const [rooms, setRooms] = useState([]);
 
   useEffect(() => {
@@ -37,35 +38,26 @@ const Rooms = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Rooms</h2>
+      <div className={styles.logoPlcHolder}>
+        <Link to="/Login">HOTELS</Link>
+      </div>
+
+      <div>
+        <nav className={styles.links}>
+          <Link to="/Login">Members</Link>
+          <Link to="/facilities">Facilities</Link>
+          <Link to="/">Home</Link>
+        </nav>
+      </div>
+      <h2 className={styles.title}>ROOMS AND RATES</h2>
       <div className={styles.roomList}>
         {rooms.map((room) => (
-          <div key={room.id} className={styles.roomCard}>
-            {/* Change the link path to RoomDetails */}
-            <Link to={`/Rooms/${room.id}`} style={{ textDecoration: 'none' }}>
-              <img src={room.image} alt={room.name} className={styles.picture} />
-              <div className={styles.info}>
-                <h2 className={styles.name}>{room.name}</h2>
-                <p className={styles.features}>{room.features}</p>
-                <div className={styles.rating}>
-                  <span className={styles.starRating}>
-                    {Array.from({ length: room.rating }).map((_, index) => (
-                      <span key={index}>&#9733;</span>
-                    ))}
-                  </span>
-                  <span className={styles.ratingText}>{room.rating} Star Ratings</span>
-                </div>
-                <div className={styles.price}>${room.price} per night</div>
-              </div>
-            </Link>
-            <div className={styles.likeIcon}>
-              <button onClick={() => handleAddToFavorites(room.id)}>
-                <span role="img" aria-label="Favorite">
-                  &#10084;&#65039;
-                </span>
-              </button>
-            </div>
-          </div>
+          <RoomCard
+            key={room.id}
+            room={room}
+            favorites={favorites} // Pass favorites to RoomCard component
+            handleAddToFavorites={handleAddToFavorites}
+          />
         ))}
       </div>
       <div>
@@ -73,7 +65,9 @@ const Rooms = () => {
         <ul className={styles.favorites}>
           {favorites.map((roomId) => (
             <li key={roomId}>
-              <Link to={`/Rooms/${roomId}`}>{`Room ${roomId}`}</Link>
+              <Link to={`/Reservation/${roomId}`} className={styles.reserveBtn}>
+                Reserve Now
+              </Link>
             </li>
           ))}
         </ul>

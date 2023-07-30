@@ -5,7 +5,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #171616;
     transition: box-shadow 0.3s ease-in-out;
   }
   
@@ -70,5 +70,27 @@
   
   .reserveBtn:hover {
     background-color: #0056b3;
+  }
+  .likeIcon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+  
+  .favoriteButton {
+    background-color: red; /* Add your preferred color for the favorite button */
+    color: white;
+    padding: 4px 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nonFavoriteButton {
+    background-color: #ccc; /* Add your preferred color for the non-favorite button */
+    color: black;
+    padding: 4px 8px;
+    border: none;
+    cursor: pointer;
   }
   

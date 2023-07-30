@@ -1,19 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory, useParams, Link } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { db, auth } from '../firebase/config';
-import SuccessReserv from './SuccessReserv'; // Import the SuccessReserv component
-
+import SuccessReserv from './SuccessReserv';
 import styles from './Reservation.module.css';
 
 function Reservation() {
+  const [user, setUser] = useState(null);
   const [room, setRoom] = useState(null);
   const [fullName, setFullName] = useState('');
   const [checkInDate, setCheckInDate] = useState('');
   const [checkOutDate, setCheckOutDate] = useState('');
-  const [reservationSuccess, setReservationSuccess] = useState(false); // State to track reservation success
+  const [reservationSuccess, setReservationSuccess] = useState(false);
 
   const history = useHistory();
   const { id } = useParams();
+
+  useEffect(() => {
+    const fetchUser = () => {
+      const currentUser = auth.currentUser;
+      if (currentUser) {
+        // User is logged in, update the state with user information
+        setUser(currentUser);
+      } else {
+        // User is not logged in, set the state to null
+        setUser(null);
+      }
+    };
+
+    fetchUser();
+  }, []);
 
   useEffect(() => {
     const fetchRoom = async () => {
@@ -23,12 +38,10 @@ function Reservation() {
         if (roomSnapshot.exists) {
           setRoom(roomSnapshot.data());
         } else {
-          // Handle room not found
           history.push('/PageDontExist');
         }
       } catch (error) {
         console.log('Error fetching room:', error);
-        // Handle error
       }
     };
 
@@ -37,12 +50,12 @@ function Reservation() {
 
   const handleReservation = async () => {
     try {
-      const user = auth.currentUser;
-      if(!user){
-        //User not logged in, redirect to Login page.
-        alert('You Must SignUp First')
-        history.push('/Login')
+      if (!user) {
+        alert('You Must Sign Up First');
+        history.push('/Login');
+        return;
       }
+
       const reservation = {
         room: room.id,
         fullName,
@@ -51,10 +64,8 @@ function Reservation() {
         userId: user.uid,
       };
 
-      // Save reservation to Firestore
       await db.collection('reservations').add(reservation);
 
-      // Update the state to indicate reservation success
       setReservationSuccess(true);
     } catch (error) {
       console.log('Error making reservation:', error);
@@ -63,48 +74,52 @@ function Reservation() {
   };
 
   if (!room) {
-    // Render loading state or return null
-    return null;
+    return <div>Loading...</div>;
   }
 
   return (
     <div className={styles.container}>
-      {/* Conditionally render SuccessReserv if reservationSuccess is true */}
       {reservationSuccess ? (
         <SuccessReserv room={room} checkInDate={checkInDate} checkOutDate={checkOutDate} />
       ) : (
         <>
-          <h2 className={styles.title}>Reserve Room: {room.name}</h2>
-          <div className={styles.formGroup}>
-            <label className={styles.label}>Full Name:</label>
-            <input
-              type="text"
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
-              className={styles.input}
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label className={styles.label}>Check-in Date:</label>
-            <input
-              type="date"
-              value={checkInDate}
-              onChange={(e) => setCheckInDate(e.target.value)}
-              className={styles.input}
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label className={styles.label}>Check-out Date:</label>
-            <input
-              type="date"
-              value={checkOutDate}
-              onChange={(e) => setCheckOutDate(e.target.value)}
-              className={styles.input}
-            />
-          </div>
-          <button onClick={handleReservation} className={styles.button}>
-            Reserve Room
-          </button>
+          {user ? (
+            <div>Welcome, {user.displayName}!</div>
+          ) : (
+            <>
+              <h2 className={styles.title}>Reserve Room: {room.name}</h2>
+              <div className={styles.formGroup}>
+                <label className={styles.label}>Full Name:</label>
+                <input
+                  type="text"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  className={styles.input}
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label className={styles.label}>Check-in Date:</label>
+                <input
+                  type="date"
+                  value={checkInDate}
+                  onChange={(e) => setCheckInDate(e.target.value)}
+                  className={styles.input}
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label className={styles.label}>Check-out Date:</label>
+                <input
+                  type="date"
+                  value={checkOutDate}
+                  onChange={(e) => setCheckOutDate(e.target.value)}
+                  className={styles.input}
+                />
+              </div>
+              <button onClick={handleReservation} className={styles.button}>
+                Reserve Room
+              </button>
+            </>
+          )}
         </>
       )}
     </div>

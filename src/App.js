@@ -33,16 +33,16 @@ function App() {
     <Router>
       <div>
         <Switch>
-          <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Home} />
           <Route path="/Facilities" component={Facilities} />
           <Route exact path="/Rooms" component={Rooms} />
           <Route path="/Rooms/:id" component={RoomDetails} />
           <Route path="/Login" component={Login} />
           <Route path="/SignUp" component={SignUp} />
           <Route path="/ResetPassword" component={ResetPassword} />
+          <Route path="/RoomCard" component={RoomCard}/>
           <Route path="/Reservation/:id" component={Reservation} />
           <Route path="/SuccessReserv" component={SuccessReserv} />
-          
           <Route path="/PageDontExist" component={PageDontExist} />
         </Switch>
       </div>

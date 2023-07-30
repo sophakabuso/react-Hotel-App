@@ -9,8 +9,35 @@
     font-size: 24px;
     margin-bottom: 20px;
   }
+  .logoPlcHolder a{
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgb(210, 1, 233) ;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #1a1a1a;
+    color:rgb(251, 215, 7) ;
+    border-radius: 50px;
+    display: inline;
+    
+  }  
+  .logoPlcHolder a:hover{
+    color: #a00ecd;
   
+  }
   .roomCard {
     margin-bottom: 20px;
+  }
+  .links a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #1a1a1a;
+    color:rgb(251, 215, 7) ;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgb(210, 1, 233) ;
+  }
+  .links a:hover {
+    color: #a00ecd;
   }
   
