@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { db, auth } from '../firebase/config';
-import SuccessReserv from './ReservationSuccess';
+
 import styles from './Reservation.module.css';
 
 function Reservation() {
