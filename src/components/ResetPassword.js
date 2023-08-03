@@ -1,10 +1,10 @@
-// import necessary dependencies
+// ResetPassword.js
+
+import React, { useState } from "react";
+import {  Link } from "react-router-dom";
 import { sendPasswordResetEmail } from "firebase/auth";
-import { useState } from "react";
-import { useHistory, Link } from 'react-router-dom';
-import React from "react";
-import { auth,db } from "../firebase/config"; // import auth from your Firebase configuration file
-import styles from "./ResetPassword.module.css";
+import { auth} from "../firebase/config";
+import styles from "./ResetPassword.module.css"; // Import the CSS module
 
 function ResetPassword() {
   const resetPassword = () => {
@@ -22,34 +22,34 @@ function ResetPassword() {
 
   return (
     <div className={styles.container}>
-      
-      <div className={styles.logoPlcHolder} >
-            <Link to="/Login"> HOTELS</Link>
-
-          </div>
-          <div>
-            <nav className={styles.links}>
-              <Link to="/Login">Members</Link>
-              <Link to="/facilities">Facilities</Link>
-              <Link to="/rooms">Rooms</Link>
-            </nav>
-          </div>
       <div className={styles.header}>
+        <div className={styles.logoPlcHolder}>
+          <Link to="/Login">HOTELS</Link>
+        </div>
         <div>
-      <h1>Welome to Leisure, Pleasure, and Luxury redefined.</h1>
-       <p>Please Enter Email to Reset Password</p>
-
-       </div>
-       </div>
-      <div>
-        <label className={styles.label}>Enter Email:</label>
-        <input
-          type="text"
-          className={styles.input}
-          placeholder="Enter Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button onClick={resetPassword}>Reset Password</button>
+          <nav className={styles.links}>
+            <Link to="/">Home</Link>
+            <Link to="/facilities">Facilities</Link>
+            <Link to="/rooms">Rooms</Link>
+          </nav>
+        </div>
+      </div>
+      <div className={styles.formContainer}>
+        <div>
+          <p>Please Enter Email to Reset Password</p>
+        </div>
+        <div>
+          <label className={styles.label}>Enter Email:</label>
+          <input
+            type="text"
+            className={styles.input}
+            placeholder="Enter Email"
+            onChange={(e) => setEmail(e.target.value)}
+          /><br></br>
+          <button className={styles.resetButton} onClick={resetPassword}>
+            Reset Password
+          </button>
+        </div>
       </div>
     </div>
   );

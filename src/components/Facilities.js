@@ -24,16 +24,18 @@ import laundrypic3 from '../assets/images/laundrypic3.jpeg';
 function Facilities() {
   return (
     <div className={styles.facilitiesContainer}>
+      <div className={styles.header}>
        <div className={styles.logoPlcHolder} >
             <Link to="/Login"> HOTELS</Link>
 
           </div>
-      <div>
-        <nav className={styles.links}>
+        <div>
+         <nav className={styles.links}>
           <Link to="/Login">Members</Link>
           <Link to="/rooms">Rooms</Link>
-          <Link to ="/">Home</Link>
+           <Link to ="/">Home</Link>
         </nav>
+      </div>
       </div>
       <div className={styles.facility}>
         <h1>FACILITIES</h1>

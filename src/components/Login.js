@@ -41,26 +41,23 @@ function Login() {
   };
 
   return (
-    <div>
-      
+    <div className={styles.container}>
       <div className={styles.header}>
-         <div className={styles.logoPlcHolder} >
-            <Link to="/Login"> HOTELS</Link>
-
-          </div>
-          <div>
-            <nav className={styles.links}>
-              <Link to="/Login">Members</Link>
-              <Link to="/facilities">Facilities</Link>
-              <Link to="/rooms">Rooms</Link>
-            </nav>
-          </div>
-          <div>
-      <h1>Welome to Leisure, Pleasure, and Luxury redefined.</h1>
-       <p>Please Enter Email and Password to login</p>
-  
-       </div>
-       </div>
+        <div className={styles.logoPlcHolder}>
+          <Link to="/Login">HOTELS</Link>
+        </div>
+        <div>
+          <nav className={styles.links}>
+          <Link to="/">Home</Link>
+            <Link to="/facilities">Facilities</Link>
+            <Link to="/rooms">Rooms</Link>
+          </nav>
+        </div>
+      </div>
+     
+      <div className={styles.formContainer}>
+        <p>Please Enter Email and Password to login</p>
+      
       <div>
         <label>Email:</label>
         <input
@@ -80,11 +77,14 @@ function Login() {
         />
       </div>
       <div>
-        <button onClick={handleLogin}>Login</button>
+        <button className={styles.loginButton} onClick={handleLogin}>
+          Login
+        </button>
         <button onClick={goToSignUp}>Not a member? Sign Up</button>
         <button onClick={goToResetPassword}>Forgot Password?</button>
       </div>
-    </div>
+      </div>
+      </div>
   );
 }
 

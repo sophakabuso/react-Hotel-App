@@ -1,0 +1,32 @@
+/* SignUp.module.css */
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  input {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .loginLink {
+    text-decoration: none;
+    color: #333;
+    margin-top: 10px;
+    display: block;
+  }
+  

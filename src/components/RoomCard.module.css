@@ -1,96 +1,78 @@
 /* RoomCard.module.css */
-.container {
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background-color: #171616;
-    transition: box-shadow 0.3s ease-in-out;
-  }
+.roomCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.picture {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.info {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.features {
+  font-size: 16px;
+  color: #42044b;
+}
+
+.bookNowButton {
+  justify-content: center;
+  display: inline-block;
+  padding:10px;
+  background-color:rgb(111, 4, 127);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight:1000;
   
-  .container:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .picture {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-  
-  .info {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  .features {
-    color: #777;
-    margin-bottom: 12px;
-  }
-  
-  .rating {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  
-  .starRating {
-    color: #ffc107;
-    margin-right: 4px;
-  }
-  
-  .ratingText {
-    color: #777;
-  }
-  
-  .price {
-    font-size: 1.1rem;
-    margin-bottom: 16px;
-  }
-  
-  .reserveBtn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .reserveBtn:hover {
-    background-color: #0056b3;
-  }
-  .likeIcon {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 8px;
-  }
-  
-  .favoriteButton {
-    background-color: red; /* Add your preferred color for the favorite button */
-    color: white;
-    padding: 4px 8px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .nonFavoriteButton {
-    background-color: #ccc; /* Add your preferred color for the non-favorite button */
-    color: black;
-    padding: 4px 8px;
-    border: none;
-    cursor: pointer;
-  }
-  
+}
+.bookNowButton:hover {
+color: gold;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.starRating {
+  color: gold;
+}
+
+.ratingText {
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.likeIcon button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color:red;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}

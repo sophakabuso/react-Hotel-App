@@ -3,28 +3,34 @@
 
 /* Hero Section */
 .heroSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    color:rgb(26, 26, 25) ;
-    text-align: center;
-    box-shadow: 0 2px 4px rgb(210, 1, 233) ;
-}
-.header{
   display: flex;
-
-  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: rgb(53, 2, 76);
+  text-align: center;
+  box-shadow: 0 2px 4px rgb(210, 1, 233);
 }
-
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px; /* Add some padding to create space between the header and the top of the page */
+ 
+}
 .logoPlcHolder{
   display: flex;
-    flex-direction: column;
-    
-    justify-content: left
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .logoPlcHolder a{
@@ -49,7 +55,10 @@
   }
   
   .links {
-    margin-top: 0px;
+    display: flex;
+    justify-content: flex-start;
+    
+    
   }
   
   .links a {
@@ -57,14 +66,14 @@
     margin: 0 10px;
     font-size: 18px;
     font-weight: 500;
-    background-color: #1a1a1a;
-    color:rgb(251, 215, 7) ;
+    
+ color:rgba(75, 4, 117, 0.985) ;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgb(210, 1, 233) ;
+  
   }
   
   .links a:hover {
-    color: #a00ecd;
+    color:gold;
   }
   
   .slogan {
@@ -125,6 +134,16 @@
     font-size: 24px;
     font-weight: 600;
   }
-  
+  .socialMediaLinks{
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+  .socialMediaLinks a{
+    margin: 0 10px;
+  }
+  .socialMediaLinks a:hover{
+    color:gold;
+  }
   /* Add more styles as needed for additional sections or content */
   

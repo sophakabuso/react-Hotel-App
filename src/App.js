@@ -10,7 +10,7 @@ import RoomDetails from './components/RoomDetails';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import ResetPassword from './components/ResetPassword';
-import SuccessReserv from './components/SuccessReserv';
+import ReservationSuccess from './components/ReservationSuccess';
 import PageDontExist from './components/PageDontExist';
 import Reservation from './components/Reservation';
 
@@ -42,7 +42,7 @@ function App() {
           <Route path="/ResetPassword" component={ResetPassword} />
           <Route path="/RoomCard" component={RoomCard}/>
           <Route path="/Reservation/:id" component={Reservation} />
-          <Route path="/SuccessReserv" component={SuccessReserv} />
+          <Route path="/ReservationSuccess" component={ReservationSuccess} />
           <Route path="/PageDontExist" component={PageDontExist} />
         </Switch>
       </div>

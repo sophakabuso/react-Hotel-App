@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px black;
+  margin: 20px;
+  padding: 20px;
+  }
+  
+  .picture {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .info {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  .name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .features {
+    font-size: 16px;
+    color: #27033c;
+  }
+  
+  .rating {
+    font-size: 18px;
+    color: #2f034c;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 10px;
+  }
+  
+  .reserveBtn {
+    justify-content: center;
+  display: inline-block;
+  padding:10px;
+  background-color:rgb(111, 4, 127);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight:1000;
+  
+  }
+  .reserveBtn:hover{
+    color: gold;
+  }

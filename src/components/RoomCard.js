@@ -7,13 +7,14 @@ const RoomCard = ({ room, favorites, handleAddToFavorites }) => {
 
   return (
     <div className={styles.roomCard}>
-      <Link to={`/Rooms/${room.id}`} style={{ textDecoration: 'none' }}>
+        <div>
         <img src={room.image} alt={room.name} className={styles.picture} />
+        </div>
         <div className={styles.info}>
           <h2 className={styles.name}>{room.name}</h2>
           <p className={styles.features}>{room.features}</p>
           <Link to={`/Rooms/${room.id}`} className={styles.bookNowButton}>
-            Book Now
+            BOOK
           </Link>
           <div className={styles.rating}>
             <span className={styles.starRating}>
@@ -23,16 +24,17 @@ const RoomCard = ({ room, favorites, handleAddToFavorites }) => {
             </span>
             <span className={styles.ratingText}>{room.rating} Star Ratings</span>
           </div>
-          <div className={styles.price}>${room.price} per night</div>
+        
         </div>
-      </Link>
       <div className={styles.likeIcon}>
         <button onClick={() => handleAddToFavorites(room.id)}>
           <span role="img" aria-label="Favorite">
             {isFavorite ? '❤️' : '🤍'}
           </span>
         </button>
+        <div className={styles.price}>R{room.price} / night</div>
       </div>
+        
     </div>
   );
 };

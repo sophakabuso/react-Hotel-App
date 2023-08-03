@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth,db} from '../firebase/config';
+import { auth} from '../firebase/config';
 import styles from './Login.module.css'
 
 function SignUp() {
@@ -38,29 +38,31 @@ function SignUp() {
         })
         .catch((error) => {
           console.log(error);
+         //NB specifie that password must be min 6 characters **to add** 
           alert('An error occurred. Please try again.');
         });
     }
   };
 
   return (
-    <div>
-        <div className={styles.logoPlcHolder} >
-            <Link to="/Login"> HOTELS</Link>
-
-          </div>
-          <div>
-            <nav className={styles.links}>
-              <Link to="/Login">Members</Link>
-              <Link to="/facilities">Facilities</Link>
-              <Link to="/rooms">Rooms</Link>
-            </nav>
-          </div>
-      <div>
-      <h1>Welome to Leisure, Pleasure, and Luxury redefined.</h1>
-       <p>Please Enter Email and Password to become a Member</p>
-       <Link to="/">Home</Link>
+    <div className={styles.container}>
+      <div className={styles.header}>
+      <div className={styles.logoPlcHolder}>
+        <Link to="/Login">HOTELS</Link>
       </div>
+      <div>
+        <nav className={styles.links}>
+          <Link to="/">Home</Link>
+          <Link to="/facilities">Facilities</Link>
+          <Link to="/rooms">Rooms</Link>
+        </nav>
+      </div>
+      </div>
+      <div className={styles.formContainer}>
+        
+        <p>Please Enter Email and Password to become a Member</p>
+     
+      
       <div>
         <label>Email:</label>
         <input
@@ -90,7 +92,10 @@ function SignUp() {
       </div>
       <div>
         <button onClick={handleSignUp}>Sign Up</button>
-        <button onClick={goToLogin}>Already have an account? Log In</button>
+        <button onClick={goToLogin} className={styles.loginButton}>
+          Already have an account? Log In
+        </button>
+      </div>
       </div>
     </div>
   );

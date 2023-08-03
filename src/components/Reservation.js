@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { db, auth } from '../firebase/config';
-import SuccessReserv from './SuccessReserv';
+import SuccessReserv from './ReservationSuccess';
 import styles from './Reservation.module.css';
 
 function Reservation() {
@@ -10,7 +10,7 @@ function Reservation() {
   const [fullName, setFullName] = useState('');
   const [checkInDate, setCheckInDate] = useState('');
   const [checkOutDate, setCheckOutDate] = useState('');
-  const [reservationSuccess, setReservationSuccess] = useState(false);
+  const [ReservationSuccess, setReservationSuccess] = useState(false);
 
   const history = useHistory();
   const { id } = useParams();
@@ -79,8 +79,11 @@ function Reservation() {
 
   return (
     <div className={styles.container}>
-      {reservationSuccess ? (
-        <SuccessReserv room={room} checkInDate={checkInDate} checkOutDate={checkOutDate} />
+      {ReservationSuccess ? (
+        <ReservationSuccess room={room} 
+          checkInDate={checkInDate} 
+          checkOutDate={checkOutDate} 
+          />
       ) : (
         <>
           {user ? (

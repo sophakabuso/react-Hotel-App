@@ -5,7 +5,7 @@
     align-items: center;
     padding: 20px;
     flex-direction: column;
-    background-color: rgb(225, 204, 227);
+    background-color: whitesmoke
   
   }
   
@@ -15,9 +15,19 @@
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgb(210, 1, 233) ;
-    background-color: rgb(21, 23, 22);
+    box-shadow: 0 2px 4px black;
+   
   
+  }
+  .header{
+    width: 90%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 10px;
+    padding: 20px; /* Add some padding to create space between the header and the top of the page */
+
   }
   .logoPlcHolder a{
     text-decoration: none;
@@ -34,17 +44,24 @@
     color: #a00ecd;
   
   }
+  .logoPlcHolder{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
   
   .facility h1 {
     font-size: 40px;
     margin-bottom: 20px;
-    color:rgb(251, 215, 7) ;
+    color:rgb(45, 2, 57);
   }
   
   .facility h2 {
   
     font-size:3vh;
-   color:rgb(251, 215, 7) ;
+    color:gold;
     background-color: rgba(0, 0, 0, 0.6); 
     width: 30vh;
     height: 5vh;
@@ -58,7 +75,7 @@
     
   }
   .facilityDescription{
-    color:rgb(251, 215, 7) ;
+    color:rgb(66, 6, 71);
     font-size:4vh;
   }
   
@@ -77,7 +94,7 @@
   }
   
   .imageContainer::-webkit-scrollbar-thumb {
-    background-color: rgba(230, 33, 33, 0.3);
+    background-color: purple;
     border-radius: 4px;
     background-color: transparent;
   
@@ -101,12 +118,17 @@
     margin: 0 10px;
     font-size: 18px;
     font-weight: 500;
-    background-color: #1a1a1a;
-    color:rgb(251, 215, 7) ;
+    
+ color:rgba(75, 4, 117, 0.985) ;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgb(210, 1, 233) ;
   }
   .links a:hover {
-    color: #a00ecd;
+    color:gold;
   }
-  
+  .links{
+    
+    display: flex;
+    justify-content: flex-end;
+    justify-content: flex-start;
+    
+  }
