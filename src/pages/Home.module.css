@@ -1,8 +1,25 @@
 
 /* Home.module.css */
 
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
 /* Hero Section */
 .heroSection {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,140 +27,102 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
-  color: rgb(53, 2, 76);
+  color: #FFFFFF;
   text-align: center;
-  box-shadow: 0 2px 4px rgb(210, 1, 233);
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 20px; /* Add some padding to create space between the header and the top of the page */
+  background-color: rgba(0., 0, 0, 0.6);
+  
  
 }
-.logoPlcHolder{
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
   display: flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end; /* Align content to the left */
   align-items: flex-end;
 }
 
-.logoPlcHolder a{
+.links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4%;
+}
+
+
+.links a {
   text-decoration: none;
-  box-shadow: 0 2px 4px rgb(210, 1, 233) ;
+  margin: 0 10px;
   font-size: 18px;
   font-weight: 500;
-  background-color: #1a1a1a;
-  color:rgb(251, 215, 7) ;
-  border-radius: 50px;
-  display: inline;
-  
-}  
-.logoPlcHolder a:hover{
-  color: #a00ecd;
-
+  color: #FFFFFF;
+  border-radius: 4px;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
 }
-  .headingLogo {
-    margin-top: 10px;
-    font-size: 28px;
-    font-weight: 700;
-  }
-  
-  .links {
-    display: flex;
-    justify-content: flex-start;
-    
-    
-  }
-  
-  .links a {
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-    font-weight: 500;
-    
- color:rgba(75, 4, 117, 0.985) ;
-    border-radius: 4px;
-  
-  }
-  
-  .links a:hover {
-    color:gold;
-  }
-  
-  .slogan {
-    margin-top: 60px;
-  }
-  
-  .slogan h2 {
-    font-size: 36px;
-    font-weight: 700;
-  }
-  
-  .slogan h3 {
-    margin-top: 10px;
-    font-size: 24px;
-    font-weight: 500;
-  }
-  
-  /* Facilities Section */
-  .facilitiesContainer {
-    padding: 80px 0;
-    background-color: #1a1a1a;
-  }
-  
-  .facility {
-    margin-bottom: 50px;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .facility h1 {
-    font-size: 36px;
-    font-weight: 700;
-  }
-  
-  .facilityDescription {
-    margin-top: 20px;
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  
-  .imageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-  
-  .imageContainer img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 0 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  .facility h2 {
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: 600;
-  }
-  .socialMediaLinks{
-    display: flex;
-    justify-content: flex-end;
-    
-  }
-  .socialMediaLinks a{
-    margin: 0 10px;
-  }
-  .socialMediaLinks a:hover{
-    color:gold;
-  }
-  /* Add more styles as needed for additional sections or content */
-  
+
+.links a:hover {
+  color: gold;
+}
+
+.slogan {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align contents to the left */
+  justify-content: flex-start;
+  width: 460px;
+  height: 250px;
+  padding: 10px 15px; /* Reduce top and bottom padding to 2px */
+  margin-bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  left: 100px;
+  top: 200px;
+  border-radius: 4%;
+}
+
+.welcomeText {
+  display: flex;
+  font-size: 24px;
+  font-weight: 500;
+  width: 100%; /* Make the item fill its div */
+  height: 61px; /* Auto height */
+  margin-bottom: 0px;
+}
+
+.hotelName {
+  border: 1px;
+  display: flex;
+  font-size: 54px;
+  font-weight: 700px;
+  width: 698px; /* Make the item fill its div */
+  height: 134px; /* Auto height */
+  margin-top:-50px;
+}
+
+.hotelTag {
+  display: flex;
+  font-size: 28px;
+  font-weight: 700px;
+  width: 354; /* Make the item fill its div */
+  height: 72px; /* Auto height */
+  margin-top:-30px;
+}
+
+.advText {
+  align-self: flex-start; /* Align the content to the left */
+  display: flex;
+  font-size: 15px;
+  font-weight: 400px;
+  width: 575; /* Make the item fill its div */
+  height: 60; /* Auto height */
+  margin-top:-25px;
+  font:lighter;
+  text-align: left;
+}
+
+
+

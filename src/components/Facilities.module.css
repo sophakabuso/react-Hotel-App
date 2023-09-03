@@ -1,134 +1,96 @@
+/* Facilities.module.css */
+
 .facilitiesContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    flex-direction: column;
-    background-color: whitesmoke
-  
-  }
-  
-  .facility {
-    flex: 0 0 300px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px black;
-   
-  
-  }
-  .header{
-    width: 90%;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-left: 10px;
-    padding: 20px; /* Add some padding to create space between the header and the top of the page */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
 
-  }
-  .logoPlcHolder a{
-    text-decoration: none;
-    box-shadow: 0 2px 4px rgb(210, 1, 233) ;
-    font-size: 18px;
-    font-weight: 500;
-    background-color: #1a1a1a;
-    color:rgb(251, 215, 7) ;
-    border-radius: 50px;
-    display: inline;
-    
-  }  
-  .logoPlcHolder a:hover{
-    color: #a00ecd;
-  
-  }
-  .logoPlcHolder{
+.header {
+  width: 90%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 10px;
+  padding: 20px; /* Add some padding to create space between the header and the top of the page */
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-  }
-  
-  .facility h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color:rgb(45, 2, 57);
-  }
-  
-  .facility h2 {
-  
-    font-size:3vh;
-    color:gold;
-    background-color: rgba(0, 0, 0, 0.6); 
-    width: 30vh;
-    height: 5vh;
-    bottom :8%;
-    left: 40%;
-    z-index: 1;
-    position:relative;
+.facilityName {
+  text-align: center;
+  width: 342;
+  height: 72;
+  color:#14274A; 
+  margin-top: 20px;
+}
 
-    border-radius: 4px;
+.facilityDescription p {
+  color: #14274A;
+  font-size: 4vh;
+  margin-top: 20px;
+  width: 100%;
+  height: 110px;
+}
+
+.facility {
+  flex: 0 0 300px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+ 
   
-    
-  }
-  .facilityDescription{
-    color:rgb(66, 6, 71);
-    font-size:4vh;
-  }
-  
-  .imageContainer {
-    display: flex;
-    overflow-x: scroll;
-    scroll-behavior:initial;
-    scroll-snap-type: x mandatory;
-    margin-top: auto;
-    width: 100%;
-    height:500px; /* Adjust the desired height */
-  }
-  
-  .imageContainer::-webkit-scrollbar {
-    width: 0px; /* Adjust the desired width */
-  }
-  
-  .imageContainer::-webkit-scrollbar-thumb {
-    background-color: purple;
-    border-radius: 4px;
-    background-color: transparent;
-  
-  }
-  
-  .imageContainer img {
-    flex: 0 0 auto;
-    margin-right: 10px;
-    width: 100%; /* Ensure the image takes full width */
-    height: 100%; /* Ensure the image takes full height */
-    scroll-snap-align: start;
-    object-fit: cover;
-    border-radius: 8px;
-    
-  }
-  
-  
-   
-  .links a {
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-    font-weight: 500;
-    
- color:rgba(75, 4, 117, 0.985) ;
-    border-radius: 4px;
-  }
-  .links a:hover {
-    color:gold;
-  }
-  .links{
-    
-    display: flex;
-    justify-content: flex-end;
-    justify-content: flex-start;
-    
-  }
+}
+
+.facility h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: rgb(45, 2, 57);
+}
+
+.facility h2 {
+  font-size: 3vh;
+ 
+  background-color: #FFFFFF;
+  width: 30vh;
+  height: 5vh;
+  bottom: 5%;
+  left: 40%;
+  z-index: 2;
+  position: relative;
+  color:#14274A; 
+}
+
+.imageContainer {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: initial;
+  scroll-snap-type: x mandatory;
+  margin-top: auto;
+  width: 100%;
+  height: 500px; /* Adjust the desired height */
+}
+
+.imageContainer::-webkit-scrollbar {
+  width: 0px; /* Adjust the desired width */
+}
+
+.imageContainer::-webkit-scrollbar-thumb {
+  background-color: purple;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.imageContainer img {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  width: 100%; /* Ensure the image takes full width */
+  height: 100%; /* Ensure the image takes full height */
+  scroll-snap-align: start;
+  object-fit: cover;
+
+}
+

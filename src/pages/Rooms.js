@@ -41,43 +41,40 @@ const Rooms = () => {
   return (
     <div className={styles.container}>
       <div className={styles.heroSection} style={{ roombg: `url(${roombg})` }}>
-        <div className={styles.header}>
-          <div className={styles.logoPlcHolder}>
-            <Link to="/Login">HOTELS</Link>
-          </div>
+      <div className={styles.header}>
           <div className={styles.links}>
             <nav>
-              <Link to="/Login">Members</Link>
-              <Link to="/facilities">Facilities</Link>
-              <Link to="/">Home</Link>
+            <Link to="/#facilities" className={styles.navLink}>Facilities</Link>
+
+              <Link to="/rooms" className={styles.navLink}>Rooms</Link>
             </nav>
           </div>
-          <div className={styles.socialMediaLinks}>
-            {/* Add social media links with Font Awesome icons */}
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faYoutube} />
-            </a>
-          </div>
         </div>
-
         <div className={styles.slogan}>
-          <div>
-            <h1 className={styles.headingLogo}>SOB hotels</h1>
-            <p>Welcome to</p>
-            <h2>Leisure, Pleasure, and Luxury redefined.</h2>
+          <div className={styles.welcomeText}>
+            <p >Welcome to</p>
+          </div>
+          <div className={styles.hotelName}>
+            <h1 >SoB </h1>
+          </div>
+          <div  className={styles.hotelTag}>
+            <h2>HOTELS </h2>
+          </div>
+          <div className={styles.advText}>
+          <h2 >Book your stay and enjoy Luxury, redefined at the most affordable rates.</h2>
           </div>
         </div>
       </div>
-      <div className={styles.roomsRatesHeader}>
-      <h2 className={styles.title}>ROOMS AND RATES</h2>
-      <p>Welcome to, where elegance meets comfort. Each room is tastefully designed with modern amenities and plush furnishings to ensure a relaxing stay. Enjoy, indulge in our premium bedding, and pamper yourself in the well-appointed en-suite bathrooms. Experience unparalleled hospitality and make lasting memories.</p>
+      <div className={styles.headerRoomsRates}>
+        <div className={styles.roomName}>
+        <h2 >ROOMS AND RATES</h2>
+        </div>
+        <div className={styles.roomDescription}>
+        <p>Welcome to, where elegance meets comfort. Each room is tastefully designed with modern amenities and plush furnishings to ensure a relaxing stay. Enjoy, indulge in our premium bedding, and pamper yourself in the well-appointed en-suite bathrooms. Experience unparalleled hospitality and make lasting memories.</p>
+        </div>
       </div>
+     
+      
       <div className={styles.roomList}>
         {rooms.map((room) => (
           <RoomCard

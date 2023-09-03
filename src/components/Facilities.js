@@ -25,24 +25,18 @@ function Facilities() {
   return (
     <div className={styles.facilitiesContainer}>
       <div className={styles.header}>
-       <div className={styles.logoPlcHolder} >
-            <Link to="/Login"> HOTELS</Link>
-
-          </div>
-        <div>
-         <nav className={styles.links}>
-          <Link to="/Login">Members</Link>
-          <Link to="/rooms">Rooms</Link>
-           <Link to ="/">Home</Link>
-        </nav>
-      </div>
-      </div>
-      <div className={styles.facility}>
+      <div className={styles.facilityName}>
         <h1>FACILITIES</h1>
-        <p className={styles.facilityDescription}>
+        <div className={styles.facilityDescription}>
+        <p >
           Experience world-class amenities and exceptional services in our luxurious hotel. Enjoy state-of-the-art facilities including a fully equipped gym, relaxing spa, refreshing swimming pool, exquisite restaurant, and efficient laundry service. Indulge in a truly remarkable stay with us.
         </p>
+        </div>
+        
       </div>
+
+      </div>
+      <div className={styles.facilityImages}>
       <div className={styles.facility}>
         <div className={styles.imageContainer}>
           <img src={gympic} alt="Gym" />
@@ -94,6 +88,7 @@ function Facilities() {
         </div>
         <h2>LAUNDRY</h2>
       </div>
+    </div>
     </div>
   );
 }
