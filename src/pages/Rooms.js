@@ -67,7 +67,7 @@ const Rooms = () => {
       </div>
       <div className={styles.headerRoomsRates}>
         <div className={styles.roomName}>
-        <h2 >ROOMS AND RATES</h2>
+        <h2>ROOMS AND RATES</h2>
         </div>
         <div className={styles.roomDescription}>
         <p>Welcome to, where elegance meets comfort. Each room is tastefully designed with modern amenities and plush furnishings to ensure a relaxing stay. Enjoy, indulge in our premium bedding, and pamper yourself in the well-appointed en-suite bathrooms. Experience unparalleled hospitality and make lasting memories.</p>
