@@ -4,6 +4,7 @@
 
 /* Container styles */
 .container {
+  position: relative;
   max-width: 1920px;
   margin: 0 auto;
   padding: 0px;
@@ -15,7 +16,7 @@
   background-size: cover;
   background-position: center;
   width: auto;
-  min-height: 100vh; /* Ensure hero section takes at least the full viewport height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,64 +26,21 @@
   padding: 20px;
 }
 
-/* Navigation links styles */
-/* Home.module.css */
+/* Containerlinks styles */
 
-.cantainerlinks nav {
-  color: #ffffff;
-  font-family: "Montserrat-Bold", Helvetica;
-  font-size: 25px;
-  font-weight: 700;
-  right: 0; /* Change 'left' to 'right' */
-  letter-spacing: 0;
-  line-height: normal;
-  position: fixed;
-  top: 0;
-  white-space: nowrap;
-  display: flex; /* Use flexbox to horizontally align items */
-  justify-content: flex-end; /* Move items to the right side */
-  align-items: center;
-}
+  .containerlinks {
+    position: absolute;
+    top: 0;
+    right: 0;
+   
+    padding: 10px; /* Add padding as needed */
+    display: flex;
+    flex-direction: row; /* Optionally, you can use a column layout for links */
+    align-items: flex-end; /* Align links to the right */
+  }
+   
 
-.cantainerlinks nav a {
-  text-decoration: none;
-  margin: 0 10px;
-  color: #fff;
-  font-weight: bold;
-}
-.navLinkFacilties{
-  
-}
 
-/* Slogan styles */
-.slogan {
-  margin-top: 20px;
-  text-align: center;
-}
 
-.welcomeText {
-  font-size: 24px;
-}
 
-.hotelName h1 {
-  font-size: 48px;
-  margin: 0;
-}
-
-.hotelTag h2 {
-  font-size: 32px;
-  margin-top: 10px;
-}
-
-.advText h2 {
-  font-size: 20px;
-  margin-top: 20px;
-}
-
-/* Facilities Container styles */
-.facilitiesContainer {
-  padding: 20px;
-  background-color: #f4f4f4;
-}
-
-/* Add additional responsive styles here as needed */
+/* Rest of your existing styles */

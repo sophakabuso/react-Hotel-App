@@ -11,12 +11,17 @@ const Home = () => {
     <div className={styles.container}>
       {/* Hero Section */}
       <div className={styles.heroSection} style={{ backgroundImage: `url(${backgroundImage})` }}>
-        <div className={styles.cantainerlinks}>
-          <nav>
+        {/* Navigation */}
+        <nav className={styles.containerlinks}>
+          <div className={styles.navContainerFacilities}>
             <Link to="/#facilities" className={styles.navLinkFacilties}>Facilities</Link>
+          </div>
+          <div className={styles.navContainerRooms}>
             <Link to="/rooms" className={styles.navLinkRooms}>Rooms</Link>
-          </nav>
-        </div>
+          </div>
+        </nav>
+        
+        {/* Slogan */}
         <div className={styles.slogan}>
           <div className={styles.welcomeText}>
             <p>Welcome to</p>
@@ -32,10 +37,12 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
       {/* Facilities Container */}
       <div id="facilities" className={styles.facilitiesContainer}>
         <Facilities />
       </div>
+      
       {/* You can add more sections or content here */}
     </div>
   );
