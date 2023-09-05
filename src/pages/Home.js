@@ -12,7 +12,7 @@ const Home = () => {
       {/* Hero Section */}
       <div className={styles.heroSection} style={{ backgroundImage: `url(${backgroundImage})` }}>
         {/* Navigation */}
-        <nav className={styles.containerlinks}>
+        <nav>
           <div className={styles.navContainerFacilities}>
             <Link to="/#facilities" className={styles.navLinkFacilties}>Facilities</Link>
           </div>

@@ -1,7 +1,10 @@
 
 
 /* Home.module.css */
-
+**{
+  padding: 0px;
+  margin: 0px;
+}
 /* Container styles */
 .container {
   position: relative;
@@ -27,20 +30,93 @@
 }
 
 /* Containerlinks styles */
+nav {
+  height: 31px;
+  width: 303px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 35%;
+  margin-left: 50%;
+}
 
-  .containerlinks {
-    position: absolute;
-    top: 0;
-    right: 0;
-   
-    padding: 10px; /* Add padding as needed */
-    display: flex;
-    flex-direction: row; /* Optionally, you can use a column layout for links */
-    align-items: flex-end; /* Align links to the right */
-  }
-   
+.navContainerFacilities {
+  
+}
 
+.navLinkFacilties {
+  color: #ffffff;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-size: 25px;
+  font-weight: 700;
 
+  letter-spacing: 0;
+  line-height: normal;
+  position: fixed;
 
+  white-space: nowrap;
+}
+
+.navContainerRooms {
+ 
+}
+
+.navLinkRooms {
+  -webkit-text-stroke: 0.5px #ffffff;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+
+  letter-spacing: 0;
+  line-height: normal;
+  position: fixed;
+  margin-left: 9%;
+  white-space: nowrap;
+}
+
+.slogan {
+  height: 600px; /* Adjusted height */
+  top: 200px; /* Adjusted top position */
+  width: 575px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+}
+
+.welcomeText {
+ 
+}
+
+.welcomeText p {
+ 
+}
+
+.hotelName {
+  
+}
+
+.hotelName h1 {
+ 
+}
+
+.hotelTag {
+ 
+}
+
+.hotelTag h2 {
+ 
+}
+
+.advText {
+ 
+}
+
+.advText h2 {
+ 
+}
 
 /* Rest of your existing styles */
