@@ -48,6 +48,8 @@ body {
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 4%;
+
+  
 }
 
 
@@ -123,12 +125,12 @@ body {
 
 .headerRoomsRates{
   flex-direction: column;
- 
+ background-color: red;
   display: flex;
   position: relative;
   justify-content: center;
   align-items: flex-start;
-  margin-left: 10px;
+
   padding: 20px; 
 }
 
