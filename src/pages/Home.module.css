@@ -1,128 +1,122 @@
 
+
 /* Home.module.css */
-
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+**{
+  padding: 0px;
+  margin: 0px;
 }
-
-/* Global styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-/* Hero Section */
-.heroSection {
+/* Container styles */
+.container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0px;
+  color: #14274A80;
+}
+
+/* Hero Section styles */
+.heroSection {
   background-size: cover;
   background-position: center;
-  color: #FFFFFF;
+  width: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background-color: rgba(0., 0, 0, 0.6);
+  color: #fff;
+  padding: 20px;
+}
+
+/* Containerlinks styles */
+nav {
+  height: 31px;
+  width: 303px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 35%;
+  margin-left: 50%;
+}
+
+.navContainerFacilities {
   
+}
+
+.navLinkFacilties {
+  color: #ffffff;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-size: 25px;
+  font-weight: 700;
+
+  letter-spacing: 0;
+  line-height: normal;
+  position: fixed;
+
+  white-space: nowrap;
+}
+
+.navContainerRooms {
  
 }
 
-.header {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  display: flex;
-  justify-content: flex-end; /* Align content to the left */
-  align-items: flex-end;
-}
+.navLinkRooms {
+  -webkit-text-stroke: 0.5px #ffffff;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
 
-.links {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 4%;
-}
-
-
-.links a {
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #FFFFFF;
-  border-radius: 4px;
-  transition: color 0.3s ease; /* Smooth color transition on hover */
-}
-
-.links a:hover {
-  color: gold;
+  letter-spacing: 0;
+  line-height: normal;
+  position: fixed;
+  margin-left: 9%;
+  white-space: nowrap;
 }
 
 .slogan {
-  position: absolute;
+  height: 600px; /* Adjusted height */
+  top: 200px; /* Adjusted top position */
+  width: 575px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align contents to the left */
   justify-content: flex-start;
-  width: 460px;
-  height: 250px;
-  padding: 10px 15px; /* Reduce top and bottom padding to 2px */
-  margin-bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.6);
-  left: 100px;
-  top: 200px;
-  border-radius: 4%;
+  flex-direction: column;
+
 }
 
 .welcomeText {
-  display: flex;
-  font-size: 24px;
-  font-weight: 500;
-  width: 100%; /* Make the item fill its div */
-  height: 61px; /* Auto height */
-  margin-bottom: 0px;
+ 
+}
+
+.welcomeText p {
+ 
 }
 
 .hotelName {
-  border: 1px;
-  display: flex;
-  font-size: 54px;
-  font-weight: 700px;
-  width: 698px; /* Make the item fill its div */
-  height: 134px; /* Auto height */
-  margin-top:-50px;
+  
+}
+
+.hotelName h1 {
+ 
 }
 
 .hotelTag {
-  display: flex;
-  font-size: 28px;
-  font-weight: 700px;
-  width: 354; /* Make the item fill its div */
-  height: 72px; /* Auto height */
-  margin-top:-30px;
+ 
+}
+
+.hotelTag h2 {
+ 
 }
 
 .advText {
-  align-self: flex-start; /* Align the content to the left */
-  display: flex;
-  font-size: 15px;
-  font-weight: 400px;
-  width: 575; /* Make the item fill its div */
-  height: 60; /* Auto height */
-  margin-top:-25px;
-  font:lighter;
-  text-align: left;
+ 
 }
 
+.advText h2 {
+ 
+}
 
-
+/* Rest of your existing styles */
