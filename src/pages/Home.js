@@ -12,6 +12,7 @@ const Home = () => {
       {/* Hero Section */}
       <div className={styles.heroSection} style={{ backgroundImage: `url(${backgroundImage})` }}>
         {/* Navigation */}
+        <div className={styles.header}>
         <nav>
           <div className={styles.navContainerFacilities}>
             <Link to="/#facilities" className={styles.navLinkFacilties}>Facilities</Link>
@@ -20,7 +21,7 @@ const Home = () => {
             <Link to="/rooms" className={styles.navLinkRooms}>Rooms</Link>
           </div>
         </nav>
-        
+        </div>
         {/* Slogan */}
         <div className={styles.slogan}>
           <div className={styles.welcomeText}>
@@ -49,3 +50,6 @@ const Home = () => {
 };
 
 export default Home;
+        
+
+       

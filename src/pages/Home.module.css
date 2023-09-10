@@ -16,34 +16,45 @@
 
 /* Hero Section styles */
 .heroSection {
-  background-size: cover;
-  background-position: center;
-  width: auto;
-  min-height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
   text-align: center;
-  color: #fff;
-  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Containerlinks styles */
-nav {
-  height: 31px;
-  width: 303px;
+
+.header{
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  background-color: gold;
+ 
+  width: 100%;
+}
+nav {
+  height: 31px;
+  width: 303px;
+  display: flex;;
   align-items: center;
-  text-align: center;
-  margin-bottom: 35%;
-  margin-left: 50%;
+  justify-content: center;
+  background-color: red;
+  position: relative;
+  margin-top:16px
+
+ 
+
 }
 
 .navContainerFacilities {
-  
+  padding-right: px;
 }
 
 .navLinkFacilties {
@@ -51,15 +62,16 @@ nav {
   font-family: "Montserrat-Bold", Helvetica;
   font-size: 25px;
   font-weight: 700;
-
+   margin-right:6vh;
   letter-spacing: 0;
   line-height: normal;
-  position: fixed;
+  position: relative;
 
-  white-space: nowrap;
+
 }
 
 .navContainerRooms {
+  padding-right:10 px;
  
 }
 
@@ -72,8 +84,8 @@ nav {
 
   letter-spacing: 0;
   line-height: normal;
-  position: fixed;
-  margin-left: 9%;
+  position: relative;
+
   white-space: nowrap;
 }
 
