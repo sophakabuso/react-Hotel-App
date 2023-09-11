@@ -36,25 +36,33 @@
   flex-direction: row;
   justify-content: flex-end;
   background-color: gold;
- 
   width: 100%;
+  margin-bottom: 22%;
+  margin-right: 5%;
+
 }
 nav {
   height: 31px;
-  width: 303px;
+  width: 240px;
   display: flex;;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: red;
   position: relative;
-  margin-top:16px
+  padding-top: 4px;
+
 
  
 
 }
 
+
 .navContainerFacilities {
-  padding-right: px;
+  width: 116px;
+  height: 30px;
+  top: 59px;
+  left: 1536.963134765625px;
+
 }
 
 .navLinkFacilties {
@@ -71,8 +79,12 @@ nav {
 }
 
 .navContainerRooms {
-  padding-right:10 px;
- 
+  width: 89px;
+  height: 30px;
+  top: 59px;
+  left: 1749.787109375px;
+  border: 0.5px;
+
 }
 
 .navLinkRooms {
@@ -81,21 +93,27 @@ nav {
   font-family: "Montserrat-Regular", Helvetica;
   font-size: 25px;
   font-weight: 400;
+  line-height: 30.48px;
 
-  letter-spacing: 0;
-  line-height: normal;
-  position: relative;
+  width: 89px;
+  height: 30px;
+  top: 59px;
+  left: 1749.787109375px;
+  border: 0.5px;
 
-  white-space: nowrap;
 }
-
 .slogan {
-  height: 600px; /* Adjusted height */
-  top: 200px; /* Adjusted top position */
-  width: 575px;
+  
+  background-color:black;
+  
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  width: 698.239990234375px;
+  height: 328px;
+  top: 342px;
+  left: 213px;
+
 
 }
 
