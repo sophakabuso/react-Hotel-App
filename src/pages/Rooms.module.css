@@ -43,7 +43,7 @@ body {
 .links {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center; 
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 4%;
